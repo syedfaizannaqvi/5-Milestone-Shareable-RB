@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+  <title>Edit & Shareable Resume Builder</title>
+</head>
+<body>
+  <form id="resume-form" style="display: flex;" >
+    <h1 class="resume-form">Resume Form</h1>
+    <input type="text" id="firstName" name="firstName" placeholder="First Name"><br>
+    <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br>
+    <input type="email" id="email" name="email" placeholder="Email "><br>
+    <input type="tel" id="phone" name="phone" placeholder="Phone#"><br>
+    <textarea id="skills" name="skills"placeholder="Skill: e.g HTML,CSS,TYPESCRIPT" required></textarea><br>
+
+    <div id="experience-container">
+        <div class="experience-entry">
+            <h2>Work Experience</h2>
+          <input type="text" class="jobtitle" placeholder="Job Title" required>
+          <input type="text" class="companyName" placeholder="Company Name" required>
+          <input type="text" class="duration" placeholder="Duration" required>
+          <textarea class="details" placeholder="Job Details" required></textarea>
+        </div>
+        <button type="button" id="addExperience" class="add-btn">Add Experience</button>
+      </div>
+      </div>
+    <div id="education-container">
+      <div class="education-entry">
+        <h2>Education</h2>
+        <input type="text" class="degree" placeholder="Degree" required>
+        <input type="text" class="school" placeholder="School" required>
+        <input type="text" class="graduationYear" placeholder="Year: 2020-2024" required>
+      </div>
+      <button type="button" id="addEducation" class="add-btn">Add Education</button>
+    </div>
+  
+    
+
+    
+    <button type="submit" class="generate-btn">Generate Resume</button>
+  </form>
+
+  <div id="resume-display" style="display: none;">
+    
+  </div>
+  <div class="resumeBtn">
+
+    <button id="editResume" style="display: none;">Edit</button>
+    <button id="generateInk" style="display: none;">Share</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
